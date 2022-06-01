@@ -1,0 +1,520 @@
+@charset "UTF-8";
+body {
+  background-color: #020A18;
+  font-size: 16px;
+  color: white;
+  font-family: "Open Sans";
+  overflow-x: hidden;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 55px;
+  line-height: 130%;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 130%;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 125%;
+  text-align: center;
+}
+
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.header {
+  background-color: #0A1220;
+}
+.header__container {
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__logo {
+  max-width: 283px;
+  height: 57px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.header__menu {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 860px) {
+  .header__menu {
+    gap: 20px;
+  }
+}
+.header__link {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: white;
+}
+
+.logo__img {
+  width: 44px;
+  height: 57px;
+  margin-right: 15px;
+}
+.logo__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.logo__text {
+  font-weight: 600;
+  font-size: 22.5455px;
+  line-height: 31px;
+  color: #3A68B8;
+}
+@media screen and (max-width: 760px) {
+  .logo__text {
+    display: none;
+  }
+}
+
+.container {
+  max-width: 1146px;
+  padding: 0 5px;
+  margin: 0 auto;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  background: #3A68B8;
+  border-radius: 5px;
+  padding: 15px 30px;
+  text-decoration: none;
+  color: white;
+}
+
+.main {
+  padding: 65px 0 80px 0;
+}
+.main__container {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 1150px) {
+  .main__container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.main__content {
+  max-width: 604px;
+  margin-right: 115px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media screen and (max-width: 1150px) {
+  .main__content {
+    margin-right: 0;
+    align-items: center;
+  }
+}
+.main__content > * {
+  margin-bottom: 40px;
+}
+.main__header {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 160%;
+  text-transform: uppercase;
+  color: #3A68B8;
+}
+.main__title {
+  color: #FFFFFF;
+}
+@media screen and (max-width: 640px) {
+  .main__title {
+    font-size: 25px;
+  }
+}
+.main__text {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 160%;
+  color: #FFFFFF;
+  opacity: 0.7;
+}
+@media screen and (max-width: 640px) {
+  .main__text {
+    font-size: 15px;
+  }
+}
+.main__btns {
+  display: flex;
+  gap: 20px;
+}
+@media screen and (max-width: 360px) {
+  .main__btns {
+    flex-direction: column;
+  }
+}
+.main__img {
+  max-height: 632px;
+  max-width: 632px;
+}
+.main__img img {
+  width: 100%;
+  object-fit: contain;
+}
+.main__logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 488px) {
+  .main__logo {
+    flex-direction: column;
+  }
+}
+.main__logo img {
+  margin: 10px;
+}
+
+.main__content_r {
+  margin-right: 115px;
+}
+@media screen and (max-width: 1150px) {
+  .main__content_r {
+    margin-right: 0;
+  }
+}
+
+.main__content_l {
+  margin-left: 115px;
+}
+@media screen and (max-width: 1150px) {
+  .main__content_l {
+    margin-left: 0;
+  }
+}
+
+.margin_r {
+  margin-right: -210px;
+}
+@media screen and (max-width: 1150px) {
+  .margin_r {
+    margin-right: 0;
+  }
+}
+
+.margin_l {
+  margin-left: -210px;
+}
+@media screen and (max-width: 1150px) {
+  .margin_l {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .main__container_rev {
+    flex-direction: column-reverse;
+  }
+}
+
+.arrow {
+  width: 27px;
+  height: 26px;
+  margin-right: 5px;
+}
+
+.bg1 {
+  background-color: #09111E;
+}
+
+.main__content_w {
+  max-width: 548px;
+}
+
+.slieder {
+  min-width: 0;
+}
+.slieder__item {
+  min-width: 0;
+  width: 362px;
+  min-height: 389px;
+  padding: 30px;
+  border-radius: 20px;
+  background-color: #101724;
+}
+
+.item-slider {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.item-slider__top {
+  height: 103px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.item-slider__middle {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 125%;
+  text-align: center;
+  color: #FFFFFF;
+  margin: 15px 0;
+}
+.item-slider__bottom {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 160%;
+  text-align: center;
+  color: #FFFFFF;
+  opacity: 0.7;
+}
+
+.slick-track {
+  display: flex;
+  gap: 20px;
+}
+
+.slick-list {
+  overflow: hidden;
+}
+
+.slider .slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider .slick-dots li {
+  list-style: none;
+  margin: 0 10px;
+}
+
+/* Активная точка */
+.slider .slick-dots li.slick-active button {
+  background-color: #4b6183;
+}
+
+/* Элемент точки */
+.slider .slick-dots li button {
+  font-size: 0;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: #2C3647;
+  opacity: 0.5;
+}
+
+.footer__colums {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.footer__img {
+  width: 12px;
+  height: 13px;
+}
+.footer__arrow {
+  width: 10px;
+  height: 5px;
+}
+
+.colum-item {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.colum-item__title {
+  margin-bottom: 35px;
+  font-family: "Circular Std";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+}
+.colum-item__list {
+  width: 165px;
+}
+
+.footer-logo {
+  max-width: 251px;
+}
+.footer-logo__top {
+  width: 45px;
+  height: 58px;
+  margin-bottom: 8px;
+}
+.footer-logo__bottom {
+  font-weight: 600;
+  font-size: 15.9627px;
+  line-height: 22px;
+  color: #3A68B8;
+}
+.footer-logo__text {
+  font-weight: 450;
+  font-size: 14px;
+  line-height: 18px;
+  color: #FFFFFF;
+  opacity: 0.6;
+  margin: 15px 0 40px 0;
+}
+
+.item-inform__item {
+  margin-top: 20px;
+}
+.item-inform__link {
+  display: flex;
+  align-items: center;
+  font-family: "Circular Std";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.item-inform__link img {
+  color: #FFFFFF;
+  margin-right: 5px;
+}
+
+.list-itemColum__item {
+  margin-top: 20px;
+}
+.list-itemColum__link {
+  font-family: "Circular Std";
+  font-style: normal;
+  font-weight: 450;
+  font-size: 14px;
+  line-height: 18px;
+  color: #FFFFFF;
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+.colum-item-rigth__text {
+  max-width: 251px;
+  font-family: "Circular Std";
+  font-style: normal;
+  font-weight: 450;
+  font-size: 14px;
+  line-height: 18px;
+  color: #FFFFFF;
+  opacity: 0.6;
+  margin: 19px 0 21px 0;
+}
+.colum-item-rigth__footer {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.colum-item-title a {
+  font-family: "Circular Std";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.colum-item-icons {
+  margin-top: 21px;
+  display: flex;
+  gap: 25px;
+}

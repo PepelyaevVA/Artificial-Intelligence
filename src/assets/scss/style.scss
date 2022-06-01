@@ -1,0 +1,31 @@
+
+body {
+    background-color: #020A18;
+    font-size: 16px;
+    color: white;
+    font-family: "Open Sans";
+    overflow-x: hidden;
+}
+h1{
+    font-weight: 800;
+    font-size: 55px;
+    line-height: 130%;
+}
+h2{
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 130%;
+}
+h3{
+    font-weight: 700;
+font-size: 25px;
+line-height: 125%;
+
+text-align: center;
+}
+@import "reset/reset";
+@import "blocks/header";
+@import "blocks/section";
+@import "blocks/main";
+@import "blocks/carousel";
+@import "blocks/footer";

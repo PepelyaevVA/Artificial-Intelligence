@@ -1,0 +1,88 @@
+.carousel {
+}
+
+.slider {
+}
+.slieder {
+        min-width: 0;
+		// .slieder_item
+
+		&__item {
+            min-width: 0;
+            width: 362px;
+            min-height: 389px;
+            padding: 30px;
+            border-radius: 20px;
+            background-color: #101724;
+		}
+}
+.item-slider {
+    min-width: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+		// .item-slider__top
+
+		&__top {
+            height: 103px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+		}
+
+		// .item-slider__middle
+
+		&__middle {
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 125%;
+            text-align: center;
+            color: #FFFFFF;
+          //  opacity: 0.7;
+            margin: 15px 0;
+		}
+
+		// .item-slider__bottom
+
+		&__bottom {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 160%;
+            text-align: center;
+            color: #FFFFFF;
+            opacity: 0.7;
+		}
+}
+.slick-track{
+    display: flex;
+    gap: 20px;
+}
+.slick-list{
+    overflow: hidden;
+}
+.item-slider{
+
+}
+.slider .slick-dots{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slider .slick-dots li{
+    list-style: none;
+    margin: 0 10px;
+}
+/* Активная точка */
+.slider .slick-dots li.slick-active button{
+    background-color: #4b6183;
+}
+/* Элемент точки */
+.slider .slick-dots li button{
+    font-size: 0;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: #2C3647;
+    opacity: 0.5;
+}
+
